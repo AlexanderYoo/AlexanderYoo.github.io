@@ -1,7 +1,6 @@
 export const PERSONAL_INFO = {
     brand: "YooCode",
     name: "Alex (In Seon) Yoo",
-    role: "Custom Software, Built Your Way",
     location: "Santa Rosa, California, United States",
     email: "alex.yoocode@gmail.com",
     siteUrl: "https://alexanderyoo.github.io",
