@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
     location: "Santa Rosa, California, United States",
     phone: "707-657-9248",
     email: "alex.yoocode@gmail.com",
-    siteUrl: "https://www.yoocode.dev",
+    siteUrl: "https://AlexanderYoo.github.io",
     resumeUrl:
         "https://www.linkedin.com/in/alexyooo/details/experience/",
     shortDescription:
