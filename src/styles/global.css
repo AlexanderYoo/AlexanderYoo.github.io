@@ -2,30 +2,30 @@
 
 
 .primary {
-  color: #1B3B6F;
+  color: #3F8C9F;
 }
 .secondary {
   color: #B3D3FE;
 }
 .bg-primary {
-  background-color: #1B3B6F;
+  background-color: #3F8C9F;
 }
 .bg-secondary {
   background-color: #214b81;
 }
 .text-primary {
-  color: #1B3B6F;
+  color: #3F8C9F;
 }
 
 /* reglas hover (usar estas clases directamente) */
 .hover-text-secondary:hover {
-  color: #1B3B6F;
+  color: #3F8C9F;
 }
 .hover\:text-secondary:hover {
   color: #B3D3FE;
 }
 .hover-bg-secondary:hover {
-  background-color: #1B3B6F;
+  background-color: #3F8C9F;
 }
 .hover\:bg-secondary:hover {
   background-color: #B3D3FE;
@@ -38,6 +38,6 @@
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #1B3B6F;
+  outline: 2px solid #3F8C9F;
   outline-offset: 2px;
 }
