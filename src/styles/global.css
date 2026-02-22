@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-poppins-bold: "Poppins-Bold", "Poppins", system-ui, sans-serif;
-  --font-code-pro: "Code-Pro", "Code Pro", "Source Code Pro", system-ui, sans-serif;
+  --font-title: "Poppins", system-ui, sans-serif;
+  --font-normal: "Inter", system-ui, sans-serif;
 }
 
 html {
-  font-family: var(--font-code-pro);
+  font-family: var(--font-normal);
 }
 
 h1,
@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-poppins-bold);
+  font-family: var(--font-title);
   font-weight: 700;
 }
 
@@ -33,7 +33,7 @@ nav li,
 nav span,
 nav label,
 nav button {
-  font-family: var(--font-poppins-bold);
+  font-family: var(--font-title);
   font-weight: 700;
 }
 
