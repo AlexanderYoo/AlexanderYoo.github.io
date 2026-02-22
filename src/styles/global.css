@@ -2,42 +2,42 @@
 
 
 .primary {
-  color: #3678cf;
+  color: #1B3B6F;
 }
 .secondary {
-  color: #214b81;
+  color: #B3D3FE;
 }
 .bg-primary {
-  background-color: #3678cf;
+  background-color: #1B3B6F;
 }
 .bg-secondary {
   background-color: #214b81;
 }
 .text-primary {
-  color: #3678cf;
+  color: #1B3B6F;
 }
 
 /* reglas hover (usar estas clases directamente) */
 .hover-text-secondary:hover {
-  color: #3678cf;
+  color: #1B3B6F;
 }
 .hover\:text-secondary:hover {
-  color: #214b81;
+  color: #B3D3FE;
 }
 .hover-bg-secondary:hover {
-  background-color: #3678cf;
+  background-color: #1B3B6F;
 }
 .hover\:bg-secondary:hover {
-  background-color: #214b81;
+  background-color: #B3D3FE;
 }
 
 
 .text-shadow {
-  text-shadow: 2px 2px 0 #3678cf;
+  text-shadow: 2px 2px 0 #B3D3FE;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #3678cf;
+  outline: 2px solid #1B3B6F;
   outline-offset: 2px;
 }

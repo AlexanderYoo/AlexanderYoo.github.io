@@ -2,6 +2,9 @@
 import { PERSONAL_INFO } from "../../data/personal";
 import Section from "../UI/Section.astro";
 import { Icon } from "astro-icon/components";
+
+const nonEmailLinks =
+    PERSONAL_INFO.socialLinks?.filter((link) => !link.href.startsWith("mailto:")) ?? [];
 ---
 
 <Section id="contact" title="Get in Touch" titleClassName="mb-8">
@@ -10,36 +13,86 @@ import { Icon } from "astro-icon/components";
         data-aos="fade-up"
         data-aos-delay="200"
     >
-        I am always open to discussing backend engineering opportunities,
-        distributed systems work, and platform reliability challenges.
+        Have a project in mind? I’d love to hear about it. Reach out, and let’s build something that works your way. I typically respond within 24–48 hours.
     </p>
     <p class="text-lg text-gray-300 mb-12 text-center font-medium" data-aos="fade-up" data-aos-delay="260">
         {PERSONAL_INFO.location}
     </p>
 
-    <!-- Links -->
+    <form
+        action={`https://formsubmit.co/${PERSONAL_INFO.email}`}
+        method="POST"
+        class="w-full max-w-xl space-y-4 rounded-xl bg-white/5 p-6 backdrop-blur-sm"
+        data-aos="fade-up"
+        data-aos-delay="320"
+    >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New portfolio contact form submission" />
+        <input type="hidden" name="_template" value="table" />
+
+        <div>
+            <label for="contact-name" class="mb-2 block text-sm font-semibold text-gray-200">Name</label>
+            <input
+                id="contact-name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                class="w-full rounded-lg border border-white/20 bg-black/20 px-4 py-3 text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3678cf]"
+                placeholder="Your name"
+            />
+        </div>
+
+        <div>
+            <label for="contact-email" class="mb-2 block text-sm font-semibold text-gray-200">Email</label>
+            <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class="w-full rounded-lg border border-white/20 bg-black/20 px-4 py-3 text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3678cf]"
+                placeholder="you@example.com"
+            />
+        </div>
+
+        <div>
+            <label for="contact-message" class="mb-2 block text-sm font-semibold text-gray-200">Message</label>
+            <textarea
+                id="contact-message"
+                name="message"
+                required
+                rows="5"
+                class="w-full rounded-lg border border-white/20 bg-black/20 px-4 py-3 text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3678cf]"
+                placeholder="Tell me about your project or opportunity"
+            />
+        </div>
+
+        <button
+            type="submit"
+            class="w-full rounded-xl bg-[#3678cf] px-6 py-4 text-center font-bold text-white transition-colors duration-150 hover:bg-[#214b81] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3678cf]"
+        >
+            Send Message
+        </button>
+    </form>
+
     <div
-        class="w-full max-w-xl space-y-6"
+        class="w-full max-w-xl space-y-6 mt-6"
         data-aos="fade-up"
         data-aos-delay="400"
     >
         {
-            PERSONAL_INFO.socialLinks &&
-                PERSONAL_INFO.socialLinks.map((link) => (
-                    <a
-                        href={link.href}
-                        target={link.href.startsWith("mailto:") || link.href.startsWith("tel:")
-                            ? undefined
-                            : "_blank"}
-                        rel={link.href.startsWith("mailto:") || link.href.startsWith("tel:")
-                            ? undefined
-                            : "noopener noreferrer"}
-                        class="flex items-center justify-center gap-3 font-bold w-full rounded-xl bg-[#3678cf] hover:bg-[#214b81] px-6 py-4 text-center text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-                    >
-                        <Icon name={link.icon} class="size-5" />
-                        {link.label}
-                    </a>
-                ))
+            nonEmailLinks.map((link) => (
+                <a
+                    href={link.href}
+                    target={link.href.startsWith("tel:") ? undefined : "_blank"}
+                    rel={link.href.startsWith("tel:") ? undefined : "noopener noreferrer"}
+                    class="flex items-center justify-center gap-3 font-bold w-full rounded-xl bg-[#3678cf] hover:bg-[#214b81] px-6 py-4 text-center text-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                >
+                    <Icon name={link.icon} class="size-5" />
+                    {link.label}
+                </a>
+            ))
         }
     </div>
 </Section>

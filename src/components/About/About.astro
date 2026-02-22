@@ -28,16 +28,13 @@ import Badge from "../UI/Badge.astro";
                 {PERSONAL_INFO.title}
             </Title>
             <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-light text-pretty">
-                Hi! I'm <span class="text-white font-semibold"
-                    >{PERSONAL_INFO.name}</span
-                >,
-                {PERSONAL_INFO.description}
+                {PERSONAL_INFO.description1}
             </p>
             <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-light text-pretty">
-                {PERSONAL_INFO.journey}
+                {PERSONAL_INFO.description2}
             </p>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed font-medium text-pretty">
-                {PERSONAL_INFO.availability}
+            <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-light text-pretty">
+                {PERSONAL_INFO.description3}
             </p>
             <div class="flex flex-wrap gap-4 mt-4">
                 {
@@ -45,16 +42,6 @@ import Badge from "../UI/Badge.astro";
                         PERSONAL_INFO.skills.map((skill) => (
                             <Badge class="px-4 py-2 bg-white/5 text-sm text-gray-200">
                                 {skill}
-                            </Badge>
-                        ))
-                }
-            </div>
-            <div class="flex flex-wrap gap-4 mt-2">
-                {
-                    PERSONAL_INFO.languages &&
-                        PERSONAL_INFO.languages.map((language) => (
-                            <Badge class="px-4 py-2 bg-primary/20 text-sm text-white">
-                                {language}
                             </Badge>
                         ))
                 }

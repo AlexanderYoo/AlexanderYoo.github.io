@@ -4,6 +4,7 @@ export const NAVIGATION_DATA = {
         { href: "#about", label: "About" },
         { href: "#experience", label: "Experience" },
         { href: "#projects", label: "Projects" },
+        { href: "#for-business", label: "For Business" },
         { href: "#contact", label: "Contact" },
     ]
 };

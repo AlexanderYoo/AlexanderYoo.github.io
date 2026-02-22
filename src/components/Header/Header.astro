@@ -1,6 +1,5 @@
 ---
 import Links from "../Links/Links.astro";
-import Title from "../UI/Title.astro";
 import { PERSONAL_INFO } from "../../data/personal";
 ---
 
@@ -9,9 +8,15 @@ import { PERSONAL_INFO } from "../../data/personal";
   class="relative h-dvh flex flex-col items-center justify-center text-center px-4"
 >
   <main class="relative z-10 flex flex-col items-center">
-    <Title level={1} animate={true}>
-      Hi, I'm {PERSONAL_INFO.name}
-    </Title>
+    <h1 class="mb-12 flex justify-center">
+      <img
+        src="/images/yoo_code_main_logo.png"
+        alt={PERSONAL_INFO.brand}
+        class="w-[96vw] max-w-[1200px] h-auto object-contain"
+        loading="eager"
+        decoding="async"
+      />
+    </h1>
     <p class="text-primary text-lg md:text-xl font-semibold mb-3 text-balance" data-aos="fade-up" data-aos-delay="120">
       {PERSONAL_INFO.role}
     </p>
@@ -25,23 +30,14 @@ import { PERSONAL_INFO } from "../../data/personal";
     <p class="text-base md:text-lg text-gray-300 mb-8 text-pretty" data-aos="fade-up" data-aos-delay="260">
       {PERSONAL_INFO.summary}
     </p>
-    <div data-aos="fade-up" data-aos-delay="400">
-      <Links />
-    </div>
     <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="520">
       <a
-        href={PERSONAL_INFO.resumeUrl}
+        href="#contact"
         target="_blank"
         rel="noopener noreferrer"
         class="px-6 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-3xl transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
       >
-        View Experience
-      </a>
-      <a
-        href="#contact"
-        class="px-6 py-3 border border-white/20 hover:border-primary text-white font-semibold rounded-3xl transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-      >
-        Contact Me
+        Start Your Project
       </a>
     </div>
   </main>

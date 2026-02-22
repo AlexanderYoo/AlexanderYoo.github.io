@@ -1,36 +1,36 @@
 export const PERSONAL_INFO = {
     brand: "YooCode",
     name: "Alex (In Seon) Yoo",
-    role: "Software Engineer | Distributed Systems & Cloud Platforms",
+    role: "Custom Software, Built Your Way",
     location: "Santa Rosa, California, United States",
     phone: "707-657-9248",
-    email: "zerocustum89@gmail.com",
+    email: "alex.yoocode@gmail.com",
     siteUrl: "https://www.yoocode.dev",
     resumeUrl:
         "https://www.linkedin.com/in/alexyooo/details/experience/",
-    availability: "Open to backend and platform engineering roles",
     shortDescription:
         "Backend engineer with 7+ years designing scalable, reliable systems in automotive, healthcare, finance, and education.",
     title: "Who is behind the systems?",
-    description:
-        "a backend-focused software engineer who designs, builds, and owns high-performance APIs and distributed services with a strong emphasis on production reliability and long-term maintainability.",
-    journey:
-        "I regularly build automation for API validation and data integrity, partner closely with product, QA, and infrastructure teams, and translate ambiguous requirements into resilient systems that scale in production.",
+    description1:
+        "YooCode was built on a simple idea: businesses deserve software that works their way.",
+    description2:
+        "I’m Alex Yoo, and I specialize in building tailored systems that streamline workflows, eliminate inefficiencies, and scale alongside growing companies.",
+    description3:
+        "Every solution I develop is designed with clarity, performance, and long-term growth in mind—because great software isn’t just built to function, it’s built to last.",
     skills: [
         "Java",
         "Spring Boot",
         "Python Automation",
         "Distributed Systems",
         "Production Reliability",
-        "Google Cloud Platform",
-        "GIS Applications",
-        "HTML",
+        "Cloud Platform",
+        "AI Integration",
     ],
     languages: ["English (Native/Bilingual)", "Korean (Native/Bilingual)"],
     heroDescription:
-        "I build scalable backend platforms with Java and Spring Boot, improve production reliability, and use automation to keep systems safe, fast, and maintainable.",
+        "We design and develop tailored web and software solutions that fit your business—not the other way around.",
     summary:
-        "My work has reduced production incidents by over 50% through proactive debugging, performance tuning, and engineering automation.",
+        "From custom web applications to backend systems, we build with your unique needs in mind.",
     socialLinks: [
         {
             href: "https://www.linkedin.com/in/alexyooo",
@@ -43,7 +43,7 @@ export const PERSONAL_INFO = {
             icon: "lucide:github",
         },
         {
-            href: "mailto:zerocustum89@gmail.com",
+            href: "mailto:alex.yoocode@gmail.com",
             label: "Email",
             icon: "lucide:mail",
         },

@@ -18,6 +18,8 @@ interface Props {
 }
 
 const { image, title, description, highlights, tags, link, github } = Astro.props;
+const hasGithub = typeof github === "string" && github.trim().length > 0;
+const hasLink = typeof link === "string" && link.trim().length > 0;
 ---
 
 <article
@@ -82,7 +84,7 @@ const { image, title, description, highlights, tags, link, github } = Astro.prop
 
         <footer class="flex items-center justify-start gap-x-4">
             {
-                github && (
+                hasGithub && (
                     <LinkButton href={github}>
                         <Icon name="lucide:github" class="size-5" />
                         Source Code
@@ -90,7 +92,7 @@ const { image, title, description, highlights, tags, link, github } = Astro.prop
                 )
             }
             {
-                link && (
+                hasLink && (
                     <LinkButton href={link}>
                         <Icon name="lucide:external-link" class="size-4" />
                         Live Demo

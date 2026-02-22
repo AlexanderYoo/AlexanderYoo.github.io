@@ -6,9 +6,18 @@ import Background from "../components/UI/Background.astro";
 import { PERSONAL_INFO } from "../data/personal";
 import "aos/dist/aos.css";
 
-const pageTitle = `${PERSONAL_INFO.name} | ${PERSONAL_INFO.role}`;
-const pageDescription = PERSONAL_INFO.shortDescription;
-const canonicalUrl = PERSONAL_INFO.siteUrl;
+interface Props {
+	pageTitle?: string;
+	pageDescription?: string;
+	canonicalPath?: string;
+}
+
+const {
+	pageTitle = `${PERSONAL_INFO.name} | ${PERSONAL_INFO.role}`,
+	pageDescription = PERSONAL_INFO.shortDescription,
+	canonicalPath = "/",
+} = Astro.props;
+const canonicalUrl = new URL(canonicalPath, PERSONAL_INFO.siteUrl).toString();
 const ogImage = `${PERSONAL_INFO.siteUrl}/images/alex-yoo.png`;
 ---
 
@@ -42,7 +51,6 @@ const ogImage = `${PERSONAL_INFO.siteUrl}/images/alex-yoo.png`;
 				name: PERSONAL_INFO.name,
 				jobTitle: PERSONAL_INFO.role,
 				email: PERSONAL_INFO.email,
-				telephone: PERSONAL_INFO.phone,
 				url: PERSONAL_INFO.siteUrl,
 				sameAs: PERSONAL_INFO.socialLinks.map((link) => link.href),
 				address: {
