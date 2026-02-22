@@ -3,9 +3,8 @@ export const PERSONAL_INFO = {
     name: "Alex (In Seon) Yoo",
     role: "Custom Software, Built Your Way",
     location: "Santa Rosa, California, United States",
-    phone: "707-657-9248",
     email: "alex.yoocode@gmail.com",
-    siteUrl: "https://AlexanderYoo.github.io",
+    siteUrl: "https://yoocode.com",
     resumeUrl:
         "https://www.linkedin.com/in/alexyooo/details/experience/",
     shortDescription:
