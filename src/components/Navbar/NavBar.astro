@@ -133,7 +133,7 @@ const resolveHref = (href: string) => {
   const closeIcon = toggle?.querySelector('[data-menu-icon="close"]');
   const mobileLinks = menu?.querySelectorAll("[data-mobile-link]");
 
-  const setMenuState = (isOpen) => {
+  const setMenuState = (isOpen: boolean) => {
     if (!toggle || !menu || !overlay || !openIcon || !closeIcon) return;
     toggle.setAttribute("aria-expanded", String(isOpen));
     menu.setAttribute("aria-hidden", String(!isOpen));
