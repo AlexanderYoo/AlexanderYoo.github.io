@@ -6,7 +6,7 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://AlexanderYoo.github.io',
-  base: '/yoo-code',
+  base: '/AlexanderYoo.github.io',
   integrations: [icon()],
   vite: {
     plugins: [tailwindcss()]
